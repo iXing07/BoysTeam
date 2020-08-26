@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>Document</title>
+	<link href="../css/mui.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/mui.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/preferential.css">
+	<script src="../js/mui.js"></script>
+	<script src="../js/rem.js"></script>
+	<script src="../js/mockjs/dist/mock.js"></script>
+	<script src="../js/database.js"></script>
+</head>
+
+<body>
+	<header>
+		<h2><i class="mui-icon mui-icon-arrowleft"></i>我的优惠券</h2>
+	</header>
+	<div class="mui-slider">
+		<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+			<li><a class="mui-control-item mui-active" href="#item1">未使用</a></li>
+			<li><a class="mui-control-item" href="#item2">已使用</a></li>
+			<li><a class="mui-control-item" href="#item2">已过期</a></li>
+		</div>
+		<div class="mui-slider-group">
+			<div id="item1" class="mui-slider-item mui-control-content mui-active">
+				<div class="list">
+					<img src="images/bgc.png" alt="" class="bgc">
+					<div class="list-left">
+						<img src="images/weishiyong.png" alt="">
+						<p>面膜专场</p>
+					</div>
+					<div class="list-midd">
+						<h2><small>￥</small>30</h2>
+						<span>满¥299可用</span>
+						<h6>面膜活动优惠券</h6>
+						<p>有效期至2019.12.03</p>
+					</div>
+					<div class="list-right">
+						<button><a href="javascript:;">去使用</a></button>
+					</div>
+				</div>
+			</div>
+			<div id="item2" class="mui-slider-item mui-control-content">
+				<div class="list">
+					<div class="listshade">
+						<img src="images/listshade.png" alt="">
+						<button class="del">删除</button>
+					</div>
+					<img src="images/bgc.hui.png" alt="" class="bgc">
+					<div class="list-left">
+						<img src="images/gift.png" alt="">
+						<p class="list-active">新人专享</p>
+					</div>
+					<div class="list-midd">
+						<h2 class="list-active"><small>￥</small>50</h2>
+						<span class="list-active span-active">满¥199可用</span>
+						<h6>限新人专场可用</h6>
+						<p>有效期至2019.12.03</p>
+					</div>
+					<div class="list-right">
+						<img src="images/alreadyUse.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div id="item3" class="mui-slider-item mui-control-content">
+				<div class="list">
+					<img src="images/bgc.hui.png" alt="" class="bgc">
+					<div class="list-left">
+						<img src="images/world.png" alt="">
+						<p class="list-active">全场通用</p>
+					</div>
+					<div class="list-midd">
+						<h2 class="list-active"><small>￥</small>5</h2>
+						<span class="list-active span-active">0门槛可用</span>
+						<h6>全场商品通用券</h6>
+						<p>有效期至2019.12.03</p>
+					</div>
+					<div class="list-right">
+						<img src="images/pasedate.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var self;
+		mui.init({
+			gestureConfig: {
+				tap: true, //默认为true
+				doubletap: true, //默认为false
+				longtap: true, //默认为false
+				swipe: true, //默认为true
+				drag: true, //默认为true
+				hold: false, //默认为false，不监听
+				release: false //默认为false，不监听
+			}
+		});
+		let Item2 = document.getElementById('item2');
+		getdata({
+			type: 'get',
+			url: 'datazx',
+			success: function (res) {
+				res.list.forEach((value) => {
+					let list = document.createElement('div');
+					list.classList.add('list');
+					list.innerHTML = `
+					<div class="listshade">
+						<img src="images/listshade.png" alt="">
+						<button class="del">删除</button>
+					</div>
+					<img src="images/bgc.hui.png" alt="" class="bgc">
+					<div class="list-left">
+						<img src="images/gift.png" alt="">
+						<p class="list-active">${value.wold}</p>
+					</div>
+					<div class="list-midd">
+						<h2 class="list-active"><small>￥</small>${value.price}</h2>
+						<span class="list-active span-active">满¥${value.number}可用</span>
+						<h6>${value.title}</h6>
+						<p>有效期至2019.12.03</p>
+					</div>
+					<div class="list-right">
+						<img src="images/alreadyUse.png" alt="">
+					</div>`
+					Item2.append(list);
+				})
+			}
+		})
+
+
+		mui('.mui-slider-group').on('longtap','.list',function() {
+			// e.preventDefault();
+			self = this;
+			this.children[0].classList.contains('listshade')?this.children[0].style.cssText = 'opacity:1;z-index: 9;':'';
+		})
+		mui('.mui-slider-group').on('tap','.del',function() {
+			self.style.display = 'none'
+		})
+	</script>
+</body>
+
+</html>
