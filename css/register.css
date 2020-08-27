@@ -39,7 +39,7 @@
 		}
 
 		.header span {
-			padding-top: 0.3rem;
+			padding-top: 0.6rem;
 			font-size: 0.24rem;
 			color: #fff2ea;
 			padding-right: 0.4rem;
@@ -137,5 +137,8 @@
 			border-radius: 0.05rem;
 			margin-top: 0.6rem;
 		}
-
+		span{
+			font-size: .14rem; 
+			display: block;
+		}
 	

@@ -6,61 +6,68 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>登录</title>
 	</head>
-	
-<link rel="stylesheet" type="text/css" href="./css/login.css"/>
+
+	<link rel="stylesheet" type="text/css" href="./css/login.css" />
 	<body>
 		<div class="header">
-			<a href=""><img src="./icon/back.png"></a>
-			<h1>登录</h1>
-			<a href="register.html"><span>注册</span></a>
+		<div><a href="index.html"><img src="./icon/back.png"></a></div>
+		<div><h1>登录</h1></div>
+		<div><a href="register.html"><span>注册</span></a></div>
 		</div>
 		<div class="login-nav">
-			<img src="./icon/logo.png">
-			<p>天眼购吧</p>
-			<form action="" method="post" name="form">
-				<div>
-					<label for="user">账号<span>:</span></label><input id="user" class="user" type="text" name="user" value="" maxlength="11"  placeholder="请输入手机号">
-				<span class="note"></span>
+			<div>
+				<img src="./icon/logo.png">
+				<p>天眼购吧</p>
+			</div>
+
+			<form action="index.html" method="get" name="form">
+				<p id="error_box"><br></p>
+				<div class="ipt">
+					<label for="phone">账号:</label><input id="phone" class="phone" type="text" name="phone" value="" maxlength="11"
+					 placeholder="请输入手机号" onblur="checkPhone()" alt="手机号">
+					<span id="phoneSpan"></span>
 				</div>
-				<div>
-					<label for="pwd">密码<span>:</span></label><input id="pwd" class="pwd" type="password" name="pwd" value="" maxlength="16"  placeholder="请输入密码">
+				<div class="ipt">
+					<label for="pwd">密码:</label><input id="pwd" class="pwd" type="password" name="pwd" value="" maxlength="16"
+					 placeholder="请输入密码" onblur="checkPwd()">
+					<span id="pwdSpan">
+					</span>
 				</div>
-				<div class="rdo">
-					<label for="radio"></label>
-					<input type="radio" name="radio" id="radio" value="" />
+				<div class="rdo ">
+					<label for="agree"></label>
+					<input type="checkbox" name="agree" id="agree" value="" onclick="checkAgree()" />
 					<span>已阅读并同意以下协议:</span>
 					<a href="">用户协议及隐私</a>
 					<a href="changepwd.html">忘记密码?</a>
 				</div>
-		
-				</form>
 				<div>
-					<button type="button" onclick="check()">登录</button>
-				</p>
-				<div class="detail-news">
-					<h5 class="detail-news-title">
-						<span>使用第三方登录</span>
-					</h5>
+					<input type="submit" id="sub" name="sub" value="登录" disabled="disabled" />
 				</div>
-				<div class="login-img">
-					<div class="login-img-left">
-						<a href="">
-							<img src="./img/weixin.png">
-							<span>微信登录</span>
-						</a>
-					</div>
-					<div class="login-img-right">
-						<a href="">
-							<img src="./img/zhifubao.png">
-							<span>支付宝登录</span>
-						</a>
-					</div>
+			</form>
+			<div class="detail-news">
+				<h5 class="detail-news-title">
+					<span>使用第三方登录</span>
+				</h5>
+			</div>
+			<div class="login-img">
+				<div class="login-img-left">
+					<a href="">
+						<img src="./img/weixin.png">
+						<span>微信登录</span>
+					</a>
 				</div>
+				<div class="login-img-right">
+					<a href="">
+						<img src="./img/zhifubao.png">
+						<span>支付宝登录</span>
+					</a>
+				</div>
+			</div>
 		</div>
 	</body>
 	<script src="./js/px-rem.js"></script>
-	<script src="./js/login.js" ></script>
+	<script src="./js/login.js"></script>
 	<script>
-	
+
 	</script>
 </html>
