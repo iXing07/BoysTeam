@@ -1,0 +1,354 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  margin: 0 auto;
+  width: 46.875rem;
+  background: #f6f6f6;
+  border: 1px solid black;
+}
+
+header {
+  position: relative;
+  width: 46.875rem;
+  height: 24.375rem;
+  background: url(../img/bj.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(8px);
+}
+
+.header {
+  position: absolute;
+  margin: 0 auto;
+  width: 46.875rem;
+  height: 24.375rem;
+  top: 0;
+  background: black;
+  opacity: .3;
+}
+
+.header-main {
+  position: absolute;
+  margin: 0 auto;
+  width: 46.875rem;
+  height: 24.375rem;
+  top: 0;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+}
+
+.header-main .pop {
+  display: none;
+  position: absolute;
+  height: 83.8125rem;
+  width: 46.875rem;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
+.header-main .pop .popmain {
+  width: 31.25rem;
+  height: 17.5rem;
+  margin: 33.125rem auto;
+  background: #fff;
+  border-radius: 1.25rem;
+}
+
+.header-main .pop .popmain .up {
+  padding: 1.875rem;
+}
+
+.header-main .pop .popmain .up img {
+  float: right;
+  cursor: pointer;
+}
+
+.header-main .pop .popmain p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  padding: 1.875rem 0px 3.625rem 0px;
+  border-bottom: 0.125rem solid #ececec;
+}
+
+.header-main .pop .popmain .bnts {
+  display: flex;
+}
+
+.header-main .pop .popmain .bnts .bnt {
+  text-align: center;
+  width: 15.5625rem;
+  height: 6.1875rem;
+  font-size: 1.5rem;
+  line-height: 6.1875rem;
+}
+
+.header-main .pop .popmain .bnts .left {
+  border-right: 0.125rem solid #ececec;
+}
+
+.header-main .pop .popmain .bnts .left a {
+  color: #ff9326;
+}
+
+.header-main .pop .popmain .bnts .right a {
+  color: #999999;
+}
+
+.header-main .bjup {
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  width: 100%;
+}
+
+.header-main .bjup h1 {
+  margin: 0 auto;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.header-main .bjup .list {
+  display: none;
+  position: absolute;
+  width: 120px;
+  height: 160px;
+  background: #fff;
+  top: 3.75rem;
+  right: 0.625rem;
+  border-radius: 0.3125rem;
+  box-shadow: 1px 1px 10px #a19f9f;
+  z-index: 99;
+}
+
+.header-main .bjup .list ul {
+  padding-top: 1.25rem;
+}
+
+.header-main .bjup .list ul li {
+  margin: 0 auto;
+  margin-bottom: 0.625rem;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #999999;
+  cursor: pointer;
+}
+
+.header-main .bjup .list ul .bdd {
+  height: 0.0625rem;
+  width: 3.125rem;
+  background: #f1f1f1f1;
+}
+
+.header-main .bjup .list::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0.625rem solid transparent;
+  border-right: 0.625rem solid transparent;
+  border-bottom: 0.625rem solid #fff;
+  top: -0.625rem;
+  right: 0.9375rem;
+  border-radius: 0.125rem;
+}
+
+.header-main .bjup .aided {
+  position: absolute;
+  right: 0;
+  top: 0.625rem;
+}
+
+.header-main .bjup .aided img {
+  padding: 0 1.25rem;
+  cursor: pointer;
+}
+
+.header-main .bjup .aided .roll {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: red;
+  border-radius: 50%;
+  top: 0.3125rem;
+  left: 2.5rem;
+}
+
+.header-main .bjmain {
+  width: 100%;
+  height: 10.875rem;
+  background: url(../img/miaomiao.png) no-repeat 0.9375rem 0;
+  padding-left: 10.625rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-main .bjmain .textup {
+  margin: 1.875rem 0;
+}
+
+.header-main .bjmain .textup h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: white;
+}
+
+.header-main .bjmain .textup p {
+  padding-top: 1.25rem;
+  font-size: 1.25rem;
+  color: #efefef;
+}
+
+.header-main .bjmain img {
+  margin: auto 1.125rem;
+  height: 2.125rem;
+  cursor: pointer;
+}
+
+.header-main nav {
+  position: absolute;
+  width: 44.375rem;
+  height: 15.625rem;
+  background: #fff;
+  border-radius: 1.125rem;
+  padding: 2.5rem 1.25rem;
+  box-sizing: border-box;
+}
+
+.header-main nav .up {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2.375rem;
+}
+
+.header-main nav .up .left {
+  display: flex;
+}
+
+.header-main nav .up .left img {
+  margin: auto 0.625rem;
+  height: 1.25rem;
+}
+
+.header-main nav .up .left h1 {
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+
+.header-main nav .up .right span {
+  font-size: 1.25rem;
+  color: #666666;
+  padding-right: 0.625rem;
+}
+
+.header-main nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-main nav ul li {
+  position: relative;
+  margin-top: 1.25rem;
+  padding: 0 2.5rem;
+  cursor: pointer;
+}
+
+.header-main nav ul li img {
+  display: block;
+  margin: 0.625rem auto;
+}
+
+.header-main nav ul li p {
+  font-size: 1.5rem;
+}
+
+.header-main nav ul li .rull {
+  position: absolute;
+  right: 3.4375rem;
+  top: 0.3125rem;
+  width: 1rem;
+  height: 1rem;
+  background: #ff9326;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 0.75rem;
+}
+
+.bd {
+  border-bottom: 0.125rem solid #f1f1f1;
+}
+
+main {
+  width: 46.875rem;
+  height: 53.125rem;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+  padding-top: 8.75rem;
+}
+
+main ul li {
+  margin-top: 0.9375rem;
+  background: #fff;
+  padding: 0 1.25rem;
+  border-radius: 1.125rem;
+  cursor: pointer;
+}
+
+main ul li .nu {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.875rem 0;
+}
+
+main ul li .nu span {
+  font-size: 1.5rem;
+}
+
+main ul li .nu img {
+  height: 1.25rem;
+  margin: auto 0;
+}
+
+footer {
+  height: 6.25rem;
+  background: #fff;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer ul li {
+  margin-top: 0.9375rem;
+  cursor: pointer;
+}
+
+footer ul li img {
+  padding: 0 0.8125rem;
+}
+
+footer ul li p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #999999;
+}

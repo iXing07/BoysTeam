@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的收藏</title>
+    <link rel="stylesheet" href="./CSS/Collection.css">
+</head>
+
+<body>
+    <header>
+        <img id="Return" src="./img/fanhui.png" alt="">
+        <h1>我的收藏</h1>
+        <span id="management">管理</span>
+        <div id="pop" class="pop">
+            <div class="popmain">
+
+                <p id="poptext"></p>
+                <div class="bnts">
+                    <div class="bnt left"><a id="guanbi2" href="#">取消</a></div>
+                    <div class="bnt right"><a id="qued" href="#">删除</a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="search">
+        <div class="input">
+            <input type="text" placeholder="搜索我收藏的商品">
+        </div>
+    </div>
+    <main>
+        <span class="statistics">共 <span id="num">2</span> 件商品</span>
+        <ul>
+            <li>
+                <div class="foll"></div><img src="./img/sp1.png" alt="">
+                <div class="text">
+                    <p> 依泉润唇膏套装 保湿滋润补水无色防干裂 唇部护理唇膜淡化唇纹护唇膏...</p>
+                    <div class="data">
+                        <div class="left">8g/ml</div>
+                        <div class="right">¥98.9</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="foll"></div><img src="./img/sp2.png" alt="">
+                <div class="text">
+                    <p>专柜正品YSL圣罗兰口红方管迷魅纯漾亮采唇膏</p>
+                    <div class="data">
+                        <div class="left">1#正红色</div>
+                        <div class="right">¥138.0</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div id="del" class="bnt">删除</div>
+        <div id="minte" class="mintext">
+            <h1>您还没有任何收藏</h1>
+            <p>快去看看有没有喜欢的吧~</p>
+        </div>
+    </main>
+    <script src="./JS/collection.js"></script>
+</body>
+
+</html>
