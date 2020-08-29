@@ -125,13 +125,13 @@ a {
 	font-size: 0.14rem;
 	display: block;
 }
-#sub {
+.sub input {
 	width: 6rem;
 	height: 0.8rem;
 	font-size: 0.24rem;
 	color: #fffefe;
 	border: none;
-	background-color: #dadada;
+	/* background-color: /* #dadada */#ff9326; */
 	border-radius: 0.05rem;
 }
 
