@@ -36,19 +36,26 @@ function adds(){
     var rights =document.getElementById('rights');
     var plus =document.getElementById('plus');
     var middles =document.getElementById('middles');
-    var bottoms = document.getElementById('bottoms')
+    // var bottoms = document.getElementById('bottoms');
+    var center = document.getElementById('center');
     var k=1;
     rights.onclick=function(){
         if (k % 2 != 0) {
             plus.src='./img/close.png';
+            center.style.height='1290px'
+            middles.style.transform='translateY(0)';
+            // bottoms.style.transform='translateY(0)';
             middles.style.display='block';
-            bottoms.style.display='block';
+            // bottoms.style.display='block';
             middles.style.display='flex';
-            bottoms.style.display='flex';
+            // bottoms.style.display='flex';
           } else {
             plus.src='./img/plus.png';
+            center.style.height='1440px'
+            middles.style.transform='translateY(500px)';
+            // bottoms.style.transform='translateY(500px)';
             middles.style.display='none';
-            bottoms.style.display='none';
+            // bottoms.style.display='none';
           }
           k++;
     }

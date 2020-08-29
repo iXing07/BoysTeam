@@ -6,8 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="./css/details.min.css"/>
 	</head>
 	<body>
-		<header class="nav">
-			<div class="top">
+		<header class="nav" id="headers">
+			<!-- <div class="top">
 				<div class="left">
 					<span><img src="./imgs/Bars _ Icon.png" alt=""></span>
 					<span>Applidium</span>
@@ -20,24 +20,118 @@
 					<span>100 %</span>
 					<span><img src="./imgs/Battery _ Icon.png" alt=""></span>
 				</div>
-			</div>
+			</div> -->
 			<div class="bottom">
 				<a href="#"><div class="backs"><img src="./imgs/back.png" alt=""></div></a>
 				<!-- <span><img src="./img/back.png" alt=""></span> -->
-                <span>商品详情</span>
-                <span><img src="./imgs/share.png" alt=""></span>
+                <span>商品详情</span>	
+                <span id="shareImg"><img src="./imgs/share.png" ></span>
 			</div>
-        </header>
-        <div class="main">
-            <div class="slideshow">
-                <img src="./imgs/lb1.png" >
+		</header>
+		<div class="fiexs" id="fiexs">
+			<div class="left">
+				<a href="http://landbillows.top/check/service/service.html#"><span><img src="./imgs/service.png" > 客服</span></a>
+				<span id="collect"><img src="./imgs/pentagram2.png" id="pentagram"> 收藏</span>
+			</div>
+			<div class="right">
+				<span id="cart">加入购物车</span>
+				<span id="buy">立即购买</span>
+			</div>
+		</div>
+		<div class="purchase" id="purchase">
+			<div class="colses" >
+				<p></p>
+				<p><img src="./imgs/closes.png" id="colses"></p>
+			</div>
+			<div class="product-name">
+				<div class="left">
+					<img src="./imgs/commodity.png" alt="">
+				</div>
+				<div class="right">
+					<p>依泉润唇膏套装 保湿滋润补水物色防干裂 唇部护理唇膜淡化唇纹</p>
+					<strong>¥98.9</strong>
+					<span>库存1908件</span>
+				</div>
+			</div>
+			<div class="specification">
+				<p>产品规格</p>
+				<span>8g/ml</span>
+				<span>4g/ml</span>
+			</div>
+			<div class="quantity">
+				<div class="left">
+					<p>购买数量</p>
+				</div>
+				<div class="right">
+					<table>
+						<th id="subtract">-</th>
+						<th id="numbers"></th>
+						<th id="append">+</th>
+					</table>
+				</div>
+			</div>
+			<div class="confirm" >
+				<button id="btn">确定</button>
+			</div>
+		</div>
+		<div class="share" id="share">
+			<p>分享到</p>
+			<div class="share-to">
+				<div class="box">
+					<a href="#"><img src="./imgs/wechat.png" alt=""></a>
+				</div>
+				<div class="box">
+					<a href="#"><img src="./imgs/circleOfFriends.png" alt=""></a>
+				</div>
+				<div class="box">
+					<a href="#"><img src="./imgs/QQ.png" alt=""></a>
+				</div>
+				<div class="box">
+					<a href="#"><img src="./imgs/qqinterspace.png" alt=""></a>
+				</div>
+				<div class="box">
+					<a href="#"><img src="./imgs/microblog.png" alt=""></a>
+				</div>
+				<div class="box">
+					<a href="#"><img src="./imgs/copy.png" alt=""></a>
+				</div>
+			</div>
+			<p id="cancle">取消</p>
+		</div>
+        <div class="main" id="main">
+            <div class="slideshow" id="slideshow">
+				<img src="./imgs/lb1.png" >
+				<div class="dot" id="dot">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
             </div>
             <div class="commodity">
                 <div class="price">
-                    <p>¥98.9</p>
+					<div class="prices">
+					<span>¥98.9</span>
+					<del>¥99.9</del>
+					</div>
+					<div class="count-down">
+						<div class="left">
+							<span>距抢购结束还剩：</span>
+						</div>
+						<div class="right">
+							<span id="hour"></span>
+							<strong>:</strong>
+							<span id="minute"></span>
+							<strong>:</strong>
+							<span id="second"></span>
+							<!-- <input type="hidden" id="local" autofocus readonly value="2020-08-28 20:30:00" > -->
+						</div>
+					</div>
                 </div>
                 <div class="product-name">
-                    <p>依泉润唇膏套装 保湿滋润补水物色防干裂 唇部护理唇膜淡化唇纹</p>
+                    <p id="copys" onClick="copyUrl2()" >依泉润唇膏套装 保湿滋润补水物色防干裂 唇部护理唇膜淡化唇纹</p>
                     <a href="#"><span>领券 <img src="./imgs/backes.png" alt=""></span></a>
 				</div>
 				<div class="expressage">
@@ -74,7 +168,88 @@
 						</dl>
 					</div>
 				</div>
-            </div>
-        </div>
+			</div>
+			<div class="commodity-details">
+				<div class="titles">
+					<p>
+						<img src="./imgs/wire.png" alt="">
+						<span>商品详情</span>
+						<img src="./imgs/wire.png" alt="">
+					</p>
+				</div>
+				<div class="detail-page">
+					<img src="./imgs/detailPage.png" alt="">
+				</div>
+				
+			</div>
+			<div class="guess-you">
+				<div class="titles-like">
+					<p>
+					<img src="./imgs/wire.png" alt="">
+					<span>猜你喜欢</span>
+					<img src="./imgs/wire.png" alt="">
+					</p>
+				</div>
+				<div class="prudocts">
+					<div class="box">
+						<div class="top">
+							<img src="./imgs/like1.png" alt="">
+							<div class="introduct">
+								<p>依泉水漾修护润手霜30ml牛油果保湿滋润肉能肌肤</p>
+								<div class="examine">
+									<span>¥48.0</span>
+									<span>点击查看 <img src="./imgs/backs.png" alt=""></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="top">
+							<img src="./imgs/like2.png" alt="">
+							<div class="introduct">
+								<p>依泉水漾修护润手霜30ml牛油果保湿滋润肉能肌肤</p>
+								<div class="examine">
+									<span>¥98.9</span>
+									<span>点击查看 <img src="./imgs/backs.png" alt=""></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="boxs">
+						<div class="boders">
+							<div class="top">
+								<img src="./imgs/like3.png" alt="">
+							</div>
+							<div class="bottom">
+								<div class="introduct">
+									<p>依泉水漾修护润手霜30ml牛油果保湿滋润肉能肌肤</p>
+									<div class="examine">
+										<span>¥98.9</span>
+										<span>点击查看 <img src="./imgs/backs.png" alt=""></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="boxs">
+						<div class="boders">
+							<div class="top">
+								<img src="./imgs/like4.png" alt="">
+							</div>
+							<div class="bottom">
+								<div class="introduct">
+									<p>依泉水漾修护润手霜30ml牛油果保湿滋润肉能肌肤</p>
+									<div class="examine">
+										<span>¥98.9</span>
+										<span>点击查看 <img src="./imgs/backs.png" alt=""></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./js/details.js"></script>
 	</body>
 </html>
