@@ -1,0 +1,193 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background-color: #F9F9F9;
+	width: 100%;
+	height: 13.34rem;
+
+}
+
+.header {
+	width: 100%;
+	height: 1.27rem;
+	background-color: #ff9326;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.header img {
+	padding-top: 0.3rem;
+	width: 0.16rem;
+	height: 0.36rem;
+	padding-left: 0.4rem;
+}
+
+.header h1 {
+	padding-top: 0.3rem;
+	font-size: 0.36rem;
+	color: #fff2ea;
+	letter-spacing: 0.1rem;
+}
+
+.header span {
+	padding-top: 0.3rem;
+	font-size: 0.24rem;
+	color: #fff2ea;
+	padding-right: 0.4rem;
+}
+
+.login-nav {
+	width: 7.1rem;
+	height: 13.4rem;
+	background-color: #FFFFFF;
+	margin: 0 auto;
+	margin-top: 0.33rem;
+	border-radius: 0.2rem;
+
+}
+
+.login-nav img {
+	padding-top: 0.98rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	display: block;
+	margin: 0 auto;
+}
+
+.login-nav p {
+	color: #333333;
+	font-size: 0.24rem;
+	text-align: center;
+	padding-top: 0.3rem;
+}
+
+.login-nav div {
+	text-align: center;
+}
+
+.ipt input {
+	margin: 0 auto;
+	width: 4.7rem;
+	height: 0.8rem;
+	border: 0.01rem solid #dadada;
+	border-radius: 0.02rem;
+	padding-left: 1.3rem;
+	font-size: 0.24rem;
+}
+
+form div:nth-child(1) {
+	margin-top: 1.30rem;
+}
+
+form div:nth-child(2) {
+	margin-top: 0.3rem;
+}
+
+form div label {
+	position: absolute;
+	font-size: 0.24rem;
+	line-height: 1.85rem;
+	padding-left: 0.3rem;
+}
+
+
+.rdo span,
+a {
+	font-size: 0.2rem;
+	color: #ff9326;
+
+}
+
+.rdo a:last-child {
+	color: #d6d6d6;
+	margin-left: 0.5rem;
+}
+
+.rdo input {
+	width: 0.02rem;
+	height: 0.2rem;
+	
+}
+
+.rdo span {
+	color: #d6d6d6;
+}
+.ipt span {
+	font-size: 0.14rem;
+	display: block;
+}
+.sub input {
+	width: 6rem;
+	height: 0.8rem;
+	font-size: 0.24rem;
+	color: #fffefe;
+	border: none;
+	/* background-color: /* #dadada */#ff9326; */
+	border-radius: 0.05rem;
+}
+
+.detail-news-title {
+	font-size: 0.24rem;
+	font-weight: normal;
+	text-align: center;
+	padding-top: 1.16rem;
+	position: relative;
+}
+
+.detail-news-title::before {
+	content: "";
+	display: block;
+	width: 6.3rem;
+	height: 0.01rem;
+	background: #dadada;
+	position: absolute;
+	left: 5%;
+	bottom: 0.1rem;
+}
+
+.detail-news-title span {
+	padding: 0 0.3rem;
+	background: #fff;
+	position: relative;
+	z-index: 99;
+	color: #858585;
+	letter-spacing: 0.02rem;
+}
+
+.login-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.24rem;
+	position: relative;
+	bottom: 0.5rem;
+}
+
+.login-img div {
+	padding: 0 0.7rem;
+
+}
+
+.login-img .login-img-left span {
+	color: #25c724;
+}
+
+.login-img .login-img-right span {
+	color: #40a5ed;
+}
+
+.login-img img {
+	width: 0.6rem;
+	height: 0.6rem;
+}
+
+

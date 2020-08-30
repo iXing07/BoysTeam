@@ -1,0 +1,144 @@
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		body {
+			background-color: #F9F9F9;
+			width: 100%;
+			height: 13.34rem;
+
+		}
+
+		.header {
+			width: 100%;
+			height: 1.27rem;
+			background-color: #ff9326;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+
+		.header img {
+			padding-top: 0.3rem;
+			width: 0.16rem;
+			height: 0.36rem;
+			padding-left: 0.4rem;
+		}
+
+		.header h1 {
+			padding-top: 0.3rem;
+			font-size: 0.36rem;
+			color: #fff2ea;
+			letter-spacing: 0.1rem;
+		}
+
+		.header span {
+			padding-top: 0.6rem;
+			font-size: 0.24rem;
+			color: #fff2ea;
+			padding-right: 0.4rem;
+		}
+
+		.register-nav {
+			width: 7.1rem;
+			height: 13.4rem;
+			background-color: #FFFFFF;
+			margin: 0 auto;
+			margin-top: 0.33rem;
+			border-radius: 0.2rem;
+
+		}
+
+		.register-nav img {
+			padding-top: 0.98rem;
+			width: 1.2rem;
+			height: 1.2rem;
+			display: block;
+			margin: 0 auto;
+		}
+
+
+		.register-nav p {
+			color: #333333;
+			font-size: 0.24rem;
+			text-align: center;
+			padding-top: 0.3rem;
+		}
+
+		.form {
+			padding-top: 1.3rem;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	form label {
+			position: absolute;
+			font-size: 0.24rem;
+			line-height: 1.8rem;
+			padding-left: 0.3rem;
+		}
+		form label>span {
+			padding-left: 0.15rem;
+		}
+		.ipt input {
+			width: 4.7rem;
+			height: 0.8rem;
+			border: 0.01rem solid #dadada;
+			border-radius: 0.02rem;
+			padding-left: 1.3rem;
+			font-size: 0.24rem;
+		}
+
+
+		.phipt input {
+			width: 5.6rem;
+			height: 0.8rem;
+			padding-left: 0.4rem;
+			border: 0.01rem solid #dadada;
+			border-radius: 0.02rem;
+				font-size: 0.24rem;
+		}
+
+		.phipt button {
+			position: absolute;
+			width: 2rem;
+			height: 0.45rem;
+			margin-top: 0.8rem;
+			border: none;
+			background: #FFFFFF;
+			color: #adadad;
+			border-left: 1px solid #adadad;
+			left: 56.6%;	font-size: 0.24rem;
+		}
+		.ckeckpassword input{
+		width: 4.4rem;
+		height: 0.8rem;
+		border: 0.01rem solid #dadada;
+		border-radius: 0.02rem;
+		padding-left: 1.6rem;
+			font-size: 0.24rem;
+		}
+		.registerbtn {
+			width: 6rem;
+			height: 0.8rem;
+			font-size: 0.24rem;
+			color: #fffefe;
+			border: none;
+			background-color: #dadada;
+			border-radius: 0.05rem;
+			margin-top: 0.6rem;
+		}
+		span{
+			font-size: .14rem; 
+			display: block;
+		}
+	
