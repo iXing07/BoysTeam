@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+div,
+span,
+small {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: '微软雅黑', '宋体';
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+button,
+input:focus,
+input:hover,
+button:focus,
+button:hover {
+  outline: none;
+  border: 0;
+}
+
+img {
+  border: 0;
+}
+
+a{
+  color: #333;
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+.warp {
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.flex{
+  display: flex;
+}
+
+body{
+  position: relative;
+  background-color: rgb(245,245,245);
+}
+
+header,footer{
+  width: 100%;
+  position: fixed;
+  z-index: 9998;
+}
+
+header{
+  top: 0;
+}
+
+section{
+  position: relative;
+  top: 4.25rem;
+  padding-bottom: 3.0625rem;
+}
+footer{
+  bottom: 0;
+}
+

@@ -1,0 +1,345 @@
+section {
+
+  div.options {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 1rem 0 1rem;
+    background-color: #fff;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 17%;
+      margin-bottom: .75rem;
+      text-align: center;
+
+      img {
+        width: 80%;
+        border-radius: 50%;
+        margin-bottom: 0.3125rem;
+      }
+    }
+  }
+
+  div.advertise {
+    height: 9.375rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  div.regions {
+    padding: 1.25rem;
+    padding-bottom: 0;
+    background-color: #fff;
+
+    div.regions-top {
+      display: flex;
+      justify-content: space-between;
+      height: 7.8125rem;
+
+      img {
+        width: 49%;
+        border-radius: 0.3125rem;
+      }
+    }
+
+    div.regions-bot {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 0.9375rem;
+
+      article {
+        position: relative;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        height: 7.1875rem;
+        padding: 0.625rem;
+        border-radius: 0.625rem;
+        box-shadow: 0 0 5px 3px #ddd;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 0.3125rem solid #fff;
+
+        h5 {
+          color: #fff;
+
+          small {
+            display: block;
+            font-weight: normal;
+          }
+        }
+
+        small.btn {
+          position: absolute;
+          bottom: 0.625rem;
+          left: calc((100% - 0.75rem - (0.625rem * 2)) / 2);
+          background-color: #fff;
+          padding: 0.125rem 0.3125rem;
+          border-radius: 1.25rem;
+        }
+
+        &:nth-child(1) {
+          background-image: url(../images/4.png);
+        }
+
+        &:nth-child(2) {
+          background-image: url(../images/4.png);
+        }
+
+        &:nth-child(3) {
+          background-image: url(../images/4.png);
+        }
+      }
+    }
+  }
+
+  div.limit {
+    display: flex;
+    padding: 1.25rem;
+    background-color: #fff;
+
+    span.tip {
+      display: inline-block;
+      font-size: 0.875rem;
+      padding-right: 0.625rem;
+      position: relative;
+
+      &::after {
+        content: "|";
+        position: absolute;
+        right: 0;
+        bottom: 25%;
+        color: #ccc;
+      }
+    }
+
+    article {
+      margin-left: 0.625rem;
+      font-weight: bold;
+      text-align: center;
+
+      span {
+        color: #000;
+        font-size: 0.875rem;
+      }
+
+      small {
+        color: rgb(186, 186, 186);
+        display: inline-block;
+        padding: 0.1875rem 0.25rem;
+        border-radius: 0.625rem;
+        font-size: 0.75rem;
+      }
+
+      &.active {
+        span {
+          color: red;
+        }
+
+        small {
+          color: #fff;
+          background-color: red;
+        }
+      }
+    }
+  }
+
+  div.purchase,
+  div.ranking {
+    article {
+      display: flex;
+      background-color: #fff;
+      padding: 0.625rem;
+      margin-bottom: 0.3125rem;
+      justify-content: space-between;
+      position: relative;
+
+      a.goDetails {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9;
+      }
+
+      div.pur-img {
+        width: 30%;
+        margin-right: 3%;
+
+        img {
+          width: 100%;
+          border-radius: 1.25rem;
+        }
+      }
+
+      aside {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h6 {
+          font-weight: normal;
+          font-size: 0.875rem;
+        }
+
+        .pur-btn {
+          //需要提升层级的
+          z-index: 999;
+        }
+
+        div.pur-rush {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          su {
+            font-size: 1rem;
+
+            span {
+              small {
+                font-size: 0.875rem;
+              }
+            }
+
+            del {
+              font-size: 0.75rem;
+              color: rgb(164, 159, 162);
+            }
+          }
+        }
+
+        div.pur-btn {
+          display: flex;
+          flex-direction: column;
+          height: 2.5rem;
+          width: 5rem;
+          padding-top: 0.1875rem;
+          background-color: red;
+          text-align: center;
+
+          span.pur-go {
+            font-size: 0.875rem;
+            color: #fff;
+          }
+
+          div {
+            display: flex;
+            align-items: center;
+            padding: 0 0.3125rem;
+
+            span {
+              position: relative;
+              display: inline-block;
+              background-color: rgba(#fff, .5);
+              width: 80%;
+              height: 0.3125rem;
+              margin-right: 5%;
+              border-radius: 0.625rem;
+
+              &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: #fff;
+                width: 60%;
+                height: 0.3125rem;
+                border-radius: 0.625rem;
+              }
+            }
+
+            small {
+              color: rgba(#fff, .6);
+              font-size: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.ranking {
+    h4 {
+      text-align: center;
+      font-size: 1.25rem;
+      line-height: 3.75rem;
+      color: red;
+      background-color: #fff;
+      margin-bottom: 0.3125rem;
+    }
+
+    article {
+      aside {
+        div.pur-rush {
+          span.ran-btn {
+            display: inline-block;
+            line-height: 1.875rem;
+            padding: 0 0.4375rem;
+            color: red;
+            font-weight: bold;
+            border: 1px solid red;
+          }
+        }
+      }
+    }
+  }
+
+  div#comList-ranking {
+    article {
+      margin-bottom: 0;
+
+      p {
+        color: red;
+        font-weight: bold;
+      }
+
+      .ran-btn {
+        background-color: #ff9326;
+        border-color: transparent;
+        z-index: 999;
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  div.more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 0;
+
+    span {
+      display: inline-block;
+      background-color: red;
+      border-radius: 50%;
+      margin: 0 0.1875rem;
+
+      &:nth-child(1) {
+        width: 0.3125rem;
+        height: 0.3125rem;
+      }
+
+      &:nth-child(2) {
+        width: 0.4375rem;
+        height: 0.4375rem;
+      }
+
+      &:nth-child(3) {
+        width: 0.5625rem;
+        height: 0.5625rem;
+      }
+    }
+  }
+}
