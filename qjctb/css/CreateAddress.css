@@ -1,0 +1,192 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	width: 100%;
+	height: 1.28rem;
+}
+
+.title {
+
+	background: black;
+	height: 0.32rem;
+}
+
+.header-bottom {
+	height: 0.96rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+header>p {
+	display: flex;
+	align-items: center;
+}
+
+.zjt {
+	font-size: 0.4rem;
+}
+
+.dz {
+	font-size: 0.36rem;
+	font-weight: 700;
+}
+
+.content {
+	width: 100%;
+	height: 12.06rem;
+	background: #f9f9f9;
+	display: flex;
+	justify-content: center;
+	align-content:flex-start;
+	flex-wrap: wrap;
+}
+
+.content-top {
+	width: 7.1rem;
+	height: 4.46rem;
+	background: #ffffff;
+	margin-top:0.1rem;
+	border-radius:0.1rem;
+}
+.lump{
+	width:7.1rem;
+	height: 0.87rem;
+	border-radius:0.1rem;
+	position: relative;
+	font-size: 0.28rem;
+	display: flex;
+	align-items: center;
+}
+
+.lump::after {
+	position: absolute;
+	left: 0.05rem;
+	bottom: -0.02rem;
+	content: " ";
+    width: 7rem;
+    height: 0.02rem;
+	background: #f9f9f9;
+	border-radius:0.1rem;
+}
+.addressee .phoneNumber .area{
+	margin-left: 0.24rem;
+	color:#000000;
+}
+.addressee>input{
+	width: 3.5rem;
+	height: 0.46rem;
+	border:none;
+	font-size: 0.28rem;
+	color: #999999;
+	outline: none;
+}
+.phoneNumber>input{
+	width: 3.5rem;
+	height: 0.46rem;
+	border:none;
+	font-size: 0.28rem;
+	color: #999999;
+	outline: none;
+}
+.area>input{
+	width: 3.5rem;
+	height: 0.46rem;
+	border:none;
+	font-size: 0.28rem;
+	color: #999999;
+	outline: none;
+}
+.area>select{
+	width: 5.1rem;
+	height: 0.46rem;
+	border:none;
+	font-size: 0.28rem;
+	color: #999999;
+	outline: none;
+}
+.addressee>span{
+	margin:0 0.24rem;
+}
+.phoneNumber>span{
+	margin:0 0.24rem;
+}
+.area>span{
+	margin:0 0.24rem;
+}
+option{
+	font-size: 0.28rem;
+}
+.lastlump{
+	width:7.1rem;
+	height:1.74rem;
+	border-radius:0.1rem;
+	position: relative;
+	font-size: 0.28rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.xxdz{
+	position: absolute;
+	top: 0rem;
+	left: 0.2rem;
+	font-size: 0.28rem;
+}
+.detailedAddress>textarea{
+	width: 6.9rem;
+	height: 1.6rem;
+	border:none;
+	text-indent:1.38rem;
+	outline: none;
+	font-size: 0.28rem;
+    color: #999999;
+}
+.content-center{
+	width: 7.1rem;
+	height: 1rem;
+	background: #ffffff;
+	margin-top:0.1rem;
+	border-radius:0.1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.content-center>p{
+	font-size: 0.28rem;
+	color:#000000;
+	margin-right: 3.3rem;
+}
+.button_hd{
+	width: 0.8rem;
+	height: 0.4rem;
+	border: 1px solid #cacaca;
+	border-radius: 0.2rem;
+
+}
+.greyBall{
+	width: 0.32rem;
+	height: 0.32rem;
+	background:#cacaca;
+	border-radius: 1rem;
+	margin-top: 0.03rem;
+	margin-left: 0.03rem;
+}
+.content-buttom{
+	width: 7.1rem;
+	height: 1rem;
+	background: #ff9326;
+	margin-top:0.1rem;
+	border-radius:0.1rem;
+	line-height: 1rem;
+	text-align: center;
+	font-size:0.36rem;
+	color:#ffffff;
+	font-weight: 600;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
