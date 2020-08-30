@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>搜索页</title>
+  <link rel="stylesheet" href="styles/public.css">
+  <link rel="stylesheet" href="font_2022760_soemqijvcjr/iconfont.css">
+  <link rel="stylesheet" href="styles/header.min.css">
+  <link rel="stylesheet" href="styles/index.min.css">
+  <script src="tool/rem.js"></script>
+  <style>
+    section {
+      padding-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <form action="">
+      <div class="news">
+        <a class="goA" href="sort.html"><i class="iconfont icon-zuoce"></i></a>
+      </div>
+      <div class="search">
+        <a class="goSearch-2" href="search-2.html"></a>
+        <i class="iconfont icon-sousuo"></i>
+        <input type="text" placeholder="请输入搜索内容">
+      </div>
+    </form>
+  </header>
+  <section>
+    <div class="ranking" id="comList-ranking"></div>
+  </section>
+
+
+  <script src="tool/jquery.js"></script>
+  <script src="tool/js/mock/node_modules/mockjs/dist/mock.js"></script>
+  <script src="scripts/ajax.js"></script>
+  <script>
+    $.get(ajax.url + '/search', function (res) {
+      $.each(res.info, function (index, value) {
+        $('#comList-ranking').append('\
+        <article>\
+        <a class="goDetails" href="' + value.searchHtmlUrl + '"></a>\
+        <div class="pur-img"><img src="' + value.searchImg + '" alt="商品"></div>\
+        <aside>\
+          <h6>' + value.searchH6 + '"</h6>\
+          <p><small>&yen;</small>' + value.searchSmall + '</p>\
+          <div class="pur-rush">\
+            <su>\
+              <span><small>月销量：</small>' + value.searchSpan + '</span>\
+            </su>\
+            <span class="ran-btn"><a href="javascript:;">加入购物车</a></span>\
+          </div>\
+        </aside>\
+      </article>')
+      });
+    }, 'json')
+  </script>
+</body>
+
+</html>

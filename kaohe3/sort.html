@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分类</title>
+  <link rel="stylesheet" href="font_2022760_soemqijvcjr/iconfont.css">
+  <link rel="stylesheet" href="styles/public.css">
+  <link rel="stylesheet" href="styles/header.min.css">
+  <link rel="stylesheet" href="styles/footer.min.css">
+  <link rel="stylesheet" href="styles/sort.min.css">
+  <script src="tool/rem.js"></script>
+  <style>
+    header {
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2>分类</h2>
+  </header>
+  <section>
+    <div class="top">
+      <div class="topNav"></div>
+    </div>
+    <div class="content">
+      <div class="left"></div>
+      <div class="right">
+        <ul></ul>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <ul>
+      <li>
+        <a href="index.html">
+          <i class="iconfont icon-zhuye"></i>
+          <span>主页</span>
+        </a>
+      </li>
+      <li class="active">
+        <a href="sort.html">
+          <i class="iconfont icon-fenlei"></i>
+          <span>分类</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="iconfont icon-3"></i>
+          <span>购物车</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="iconfont icon-ziyuan"></i>
+          <span>我的</span>
+        </a>
+      </li>
+    </ul>
+
+  </footer>
+  <script src="tool/jquery.js"></script>
+  <script src="tool/js/mock/node_modules/mockjs/dist/mock.js"></script>
+  <script src="scripts/ajax.js"></script>
+  <script>
+    function getData(ins, val) {
+      $(".right>ul").append(' <li><a href="' + val.sortHtmlUrl + '">\
+          <img src="' + val.sortImgUrl + '" alt="">\
+          <su>' + val.sortAllLi + '</su>\
+          </a></li>')
+    }
+
+    function selected(ins) {
+      $(".topNav").children().removeClass('active');
+      $(".left").children().removeClass('active');
+      $(".topNav").children().eq(ins).addClass('active');
+      $(".left").children().eq(ins).addClass('active');
+    }
+
+    $.get(ajax.url + '/sort', function (res) {
+      $.each(res.btn, function (ins, val) {
+        $(".topNav").append('<button data-ins="' + ins + '" data-id="' + val.sortAllId + '">' + val.sortBtn +
+          '</button>');
+        $('.left').append('<span data-ins="' + ins + '" data-id="' + val.sortAllId + '">' + val.sortBtn +
+          '</span>');
+      });
+
+      setTimeout(function () {
+        selected(0)
+        $(".top").on("click", "button", function () {
+          let btnIns = $(this).attr('data-ins');
+          let btnId = $(this).attr('data-id');
+          selected(btnIns)
+          $('.right>ul').html("");
+          $.each(res[btnId], function (ins, val) {
+            getData(ins, val)
+          })
+        })
+
+        $(".left").on("click", "span", function () {
+          let spanIns = $(this).attr('data-ins');
+          let spanId = $(this).attr('data-id');
+          selected(spanIns)
+          $('.right>ul').html("");
+          $.each(res[spanId], function (ins, val) {
+            getData(ins, val)
+          })
+        })
+      }, 100)
+
+      $.each(res.all, function (index, value) {
+        getData(index, value)
+      });
+
+    }, 'json')
+  </script>
+</body>
+
+</html>

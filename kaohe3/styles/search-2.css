@@ -1,0 +1,33 @@
+section {
+  padding: 0  0.625rem;
+}
+
+section div.history div {
+  display: flex;
+}
+
+section div.history div.his-top {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6875rem;
+}
+
+section div.history div.his-top span {
+  font-size: 0.75rem;
+}
+
+section div.history div.his-top a i {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+section div.history div.his-bot a {
+  display: block;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  width: 2.8125rem;
+  margin-right: 1.3125rem;
+  line-height: 1.25rem;
+  color: #666;
+  font-size: 0.75rem;
+}

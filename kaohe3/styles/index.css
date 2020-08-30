@@ -1,0 +1,341 @@
+section div.options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 1rem 0 1rem;
+  background-color: #fff;
+}
+
+section div.options a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 17%;
+  margin-bottom: .75rem;
+  text-align: center;
+}
+
+section div.options a img {
+  width: 80%;
+  border-radius: 50%;
+  margin-bottom: 0.3125rem;
+}
+
+section div.advertise {
+  height: 9.375rem;
+  overflow: hidden;
+}
+
+section div.advertise img {
+  width: 100%;
+}
+
+section div.regions {
+  padding: 1.25rem;
+  padding-bottom: 0;
+  background-color: #fff;
+}
+
+section div.regions div.regions-top {
+  display: flex;
+  justify-content: space-between;
+  height: 7.8125rem;
+}
+
+section div.regions div.regions-top img {
+  width: 49%;
+  border-radius: 0.3125rem;
+}
+
+section div.regions div.regions-bot {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.9375rem;
+}
+
+section div.regions div.regions-bot article {
+  position: relative;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  height: 7.1875rem;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 5px 3px #ddd;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0.3125rem solid #fff;
+}
+
+section div.regions div.regions-bot article h5 {
+  color: #fff;
+}
+
+section div.regions div.regions-bot article h5 small {
+  display: block;
+  font-weight: normal;
+}
+
+section div.regions div.regions-bot article small.btn {
+  position: absolute;
+  bottom: 0.625rem;
+  left: calc((100% - 0.75rem - (0.625rem * 2)) / 2);
+  background-color: #fff;
+  padding: 0.125rem 0.3125rem;
+  border-radius: 1.25rem;
+}
+
+section div.regions div.regions-bot article:nth-child(1) {
+  background-image: url(../images/4.png);
+}
+
+section div.regions div.regions-bot article:nth-child(2) {
+  background-image: url(../images/4.png);
+}
+
+section div.regions div.regions-bot article:nth-child(3) {
+  background-image: url(../images/4.png);
+}
+
+section div.limit {
+  display: flex;
+  padding: 1.25rem;
+  background-color: #fff;
+}
+
+section div.limit span.tip {
+  display: inline-block;
+  font-size: 0.875rem;
+  padding-right: 0.625rem;
+  position: relative;
+}
+
+section div.limit span.tip::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  bottom: 25%;
+  color: #ccc;
+}
+
+section div.limit article {
+  margin-left: 0.625rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+section div.limit article span {
+  color: #000;
+  font-size: 0.875rem;
+}
+
+section div.limit article small {
+  color: #bababa;
+  display: inline-block;
+  padding: 0.1875rem 0.25rem;
+  border-radius: 0.625rem;
+  font-size: 0.75rem;
+}
+
+section div.limit article.active span {
+  color: red;
+}
+
+section div.limit article.active small {
+  color: #fff;
+  background-color: red;
+}
+
+section div.purchase article,
+section div.ranking article {
+  display: flex;
+  background-color: #fff;
+  padding: 0.625rem;
+  margin-bottom: 0.3125rem;
+  justify-content: space-between;
+  position: relative;
+}
+
+section div.purchase article a.goDetails,
+section div.ranking article a.goDetails {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+}
+
+section div.purchase article div.pur-img,
+section div.ranking article div.pur-img {
+  width: 30%;
+  margin-right: 3%;
+}
+
+section div.purchase article div.pur-img img,
+section div.ranking article div.pur-img img {
+  width: 100%;
+  border-radius: 1.25rem;
+}
+
+section div.purchase article aside,
+section div.ranking article aside {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section div.purchase article aside h6,
+section div.ranking article aside h6 {
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+section div.purchase article aside .pur-btn,
+section div.ranking article aside .pur-btn {
+  z-index: 999;
+}
+
+section div.purchase article aside div.pur-rush,
+section div.ranking article aside div.pur-rush {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section div.purchase article aside div.pur-rush su,
+section div.ranking article aside div.pur-rush su {
+  font-size: 1rem;
+}
+
+section div.purchase article aside div.pur-rush su span small,
+section div.ranking article aside div.pur-rush su span small {
+  font-size: 0.875rem;
+}
+
+section div.purchase article aside div.pur-rush su del,
+section div.ranking article aside div.pur-rush su del {
+  font-size: 0.75rem;
+  color: #a49fa2;
+}
+
+section div.purchase article aside div.pur-btn,
+section div.ranking article aside div.pur-btn {
+  display: flex;
+  flex-direction: column;
+  height: 2.5rem;
+  width: 5rem;
+  padding-top: 0.1875rem;
+  background-color: red;
+  text-align: center;
+}
+
+section div.purchase article aside div.pur-btn span.pur-go,
+section div.ranking article aside div.pur-btn span.pur-go {
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+section div.purchase article aside div.pur-btn div,
+section div.ranking article aside div.pur-btn div {
+  display: flex;
+  align-items: center;
+  padding: 0 0.3125rem;
+}
+
+section div.purchase article aside div.pur-btn div span,
+section div.ranking article aside div.pur-btn div span {
+  position: relative;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 80%;
+  height: 0.3125rem;
+  margin-right: 5%;
+  border-radius: 0.625rem;
+}
+
+section div.purchase article aside div.pur-btn div span::before,
+section div.ranking article aside div.pur-btn div span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  width: 60%;
+  height: 0.3125rem;
+  border-radius: 0.625rem;
+}
+
+section div.purchase article aside div.pur-btn div small,
+section div.ranking article aside div.pur-btn div small {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+}
+
+section div.ranking h4 {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 3.75rem;
+  color: red;
+  background-color: #fff;
+  margin-bottom: 0.3125rem;
+}
+
+section div.ranking article aside div.pur-rush span.ran-btn {
+  display: inline-block;
+  line-height: 1.875rem;
+  padding: 0 0.4375rem;
+  color: red;
+  font-weight: bold;
+  border: 1px solid red;
+}
+
+section div#comList-ranking article {
+  margin-bottom: 0;
+}
+
+section div#comList-ranking article p {
+  color: red;
+  font-weight: bold;
+}
+
+section div#comList-ranking article .ran-btn {
+  background-color: #ff9326;
+  border-color: transparent;
+  z-index: 999;
+}
+
+section div#comList-ranking article .ran-btn a {
+  color: #fff;
+}
+
+section div.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 0;
+}
+
+section div.more span {
+  display: inline-block;
+  background-color: red;
+  border-radius: 50%;
+  margin: 0 0.1875rem;
+}
+
+section div.more span:nth-child(1) {
+  width: 0.3125rem;
+  height: 0.3125rem;
+}
+
+section div.more span:nth-child(2) {
+  width: 0.4375rem;
+  height: 0.4375rem;
+}
+
+section div.more span:nth-child(3) {
+  width: 0.5625rem;
+  height: 0.5625rem;
+}

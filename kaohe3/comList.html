@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品列表</title>
+  <link rel="stylesheet" href="styles/public.css">
+  <link rel="stylesheet" href="font_2022760_soemqijvcjr/iconfont.css">
+  <link rel="stylesheet" href="styles/header.min.css">
+  <link rel="stylesheet" href="styles/index.min.css">
+  <link rel="stylesheet" href="styles/footer.min.css">
+  <script src="tool/rem.js"></script>
+  <style>
+    section {
+      padding-bottom: 0;
+    }
+
+    .hide {
+      position: fixed;
+      bottom: calc(100% - (100% - 25.9375rem));
+      right: 0;
+      left: 0;
+      top: 0;
+      display: none;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, .4);
+    }
+
+    footer {
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <form action="">
+      <div class="news">
+        <a class="goA" href="sort.html"><i class="iconfont icon-zuoce"></i></a>
+      </div>
+      <div class="search">
+        <a class="goSearch-2" href="search-2.html"></a>
+        <i class="iconfont icon-sousuo"></i>
+        <input type="text" placeholder="请输入搜索内容">
+      </div>
+    </form>
+  </header>
+  <section>
+    <div class="ranking" id="comList-ranking"></div>
+  </section>
+  <footer>
+    <div class="joinCart">
+      <div class="close"><i class="iconfont icon-shanchu"></i></div>
+      <article>
+        <aside><img src="images/10.png" alt=""></aside>
+        <aside>
+          <span>依泉润唇膏套装 保湿滋润补水物色防干裂 唇部护理唇膜淡化唇纹</span>
+          <span class="money"><small>&yen;</small>98.9</span>
+          <small class="sum">库存1908件</small>
+        </aside>
+      </article>
+      <div class="size">
+        <p>产品规格</p>
+        <div class="select"><span>8g/ml</span><span class="disabled">4g/ml</span></div>
+      </div>
+      <div class="number">
+        <span>购买数量</span>
+        <span><small>-</small>
+          <su>1</su><small>+</small>
+        </span>
+      </div>
+      <button><a href="#">加入购物车</a></button>
+    </div>
+  </footer>
+
+  <div class="hide"></div>
+
+
+
+
+
+  <script src="tool/jquery.js"></script>
+  <script src="tool/js/mock/node_modules/mockjs/dist/mock.js"></script>
+  <script src="scripts/ajax.js"></script>
+  <script>
+    $.get(ajax.url + '/comList', function (res) {
+      $.each(res.info, function (index, value) {
+        $('#comList-ranking').append('\
+        <article>\
+        <a class="goDetails" href="' + value.searchHtmlUrl + '"></a>\
+        <div class="pur-img"><img src="' + value.searchImg + '" alt="商品"></div>\
+        <aside>\
+          <h6>' + value.searchH6 + '"</h6>\
+          <p><small>&yen;</small>' + value.searchSmall + '</p>\
+          <div class="pur-rush">\
+            <su>\
+              <span><small>月销量：</small>' + value.searchSpan + '</span>\
+            </su>\
+            <span class="ran-btn"><a href="javascript:;">加入购物车</a></span>\
+          </div>\
+        </aside>\
+      </article>')
+
+
+        function tog(dis) {
+          if (dis) {
+            $('.hide').css({
+              display: "block"
+            });
+            $(".joinCart").css({
+              height: "25.9375rem",
+              padding: "1.25rem"
+            })
+          } else {
+            $('.hide').css({
+              display: "none"
+            });
+            $(".joinCart").css({
+              height: "0",
+              padding: "0"
+            })
+          }
+        }
+
+        $(".ran-btn").on('click', function () {
+          tog(true);
+        })
+
+        $(".icon-shanchu").on('click', function () {
+          tog(false)
+        })
+
+        $("button").on("click", function () {
+          tog(false)
+        })
+      });
+    }, 'json')
+  </script>
+</body>
+
+</html>
