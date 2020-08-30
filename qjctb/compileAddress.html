@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compileAddress</title>
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/compileAddress.css">
+	<script type="text/javascript" src="js/rem.js"> </script>
+	<script src="./js/jquery-1.12.4.js"></script>
+    <script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <header>
+      <p class="title"></p>
+      <div class="header-bottom">
+        <p><a href="./addressAdministration.html" class="iconfont zjt">&#xe68d;</a></p>
+        <p class="dz">编辑收货地址</p>
+        <p class="dle" id="dle">删除</p>
+      </div>
+    </header>
+    <div class="content">
+      <div class="content-top">
+		  <div class="lump">
+			  <form action="" class="addressee"><span>收件人</span> <input type="text" name="firstname" placeholder="郭女士">
+			  </form>
+		  </div>
+		  <div class="lump">
+			<form action="" class="phoneNumber"><span>手机号码</span><input type="text" name="firstname" placeholder="17896308520">
+			</form>
+		  </div>
+		  <div class="lump">
+			<form action="" class="area"><span>所在地区</span>
+				<select name="cars">
+				<option value="province" hidden>浙江省 温州市 鹿城工业区</option>
+				<option value="Zhejiang">浙江</option>
+				<option value="Wenzhou">温州</option>
+				<option value="leatherFactory">江南皮革厂</option>
+				<option value="liquidation">倒闭啦</option>
+				</select>
+			</form>
+		  </div>
+		  <div class="lastlump" >
+			  <p class="xxdz">详细地址</p>
+			  <form action="" class="detailedAddress">
+				  <textarea  type="text" class="" placeholder="泰力路37号B幢203室"></textarea>
+			  </form>
+		  </div>
+	  </div>
+	  <div class="content-center">
+		  <p>设为默认地址</p>
+		  <div class="button_hd" id="button_hd">
+			  <div class="greyBall" id="greyBall"></div>
+		  </div>
+	  </div>
+	  <button class="content-buttom" id="content_buttom">
+		  保存收货地址
+	  </button>
+	</div>
+	<div class="Edit_the_address">
+		<div class="tips"><p>是否保存本次编辑结果？</p></div>
+		<button class="option_one">保存</button>
+		<button class="option_two">不保存</button>
+	</div>
+	<div class="Delete_the_address">
+		<div class="tips"><p>确定要删除该地址吗？</p></div>
+		<button class="option_one">取消</button>
+		<button class="option_two">删除</button>
+	</div>
+	<script src="./js/compileAddress.js"></script>
+  </body>
+</html>

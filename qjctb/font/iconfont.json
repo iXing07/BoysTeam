@@ -1,0 +1,44 @@
+{
+  "id": "2027486",
+  "name": "淘宝",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1287696",
+      "name": "打钩",
+      "font_class": "dagou",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "14478390",
+      "name": "关  闭",
+      "font_class": "guanbi",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "13859893",
+      "name": "编 辑",
+      "font_class": "bianji",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "2372624",
+      "name": "左右箭头",
+      "font_class": "zuoyoujiantou",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
+      "icon_id": "3432566",
+      "name": "左右箭头 (1)",
+      "font_class": "zuoyoujiantou1",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    }
+  ]
+}

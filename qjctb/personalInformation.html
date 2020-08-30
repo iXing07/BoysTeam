@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>personalInformation</title>
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="css/public.css" />
+    <link rel="stylesheet" type="text/css" href="css/personalInformation.css" />
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <header>
+      <p class="title"></p>
+      <div class="header-bottom">
+        <p><i class="iconfont zjt">&#xe68d;</i></p>
+        <p class="grxx">个人信息</p>
+        <p></p>
+      </div>
+    </header>
+    <div class="content">
+        <div class="content-center">
+            <div class="headPortrait">
+                <div class="headPortrait-center">
+                    <p>头像</p>
+                    <div class="headPortrait-right">
+                        <div class="touxiang">
+                            
+                        </div>
+                        <i class="iconfont hzjt">&#xe662;</i>
+                    </div>
+                </div>
+            </div>
+            <div class="nickname">
+                <div class="nickname-center">
+                    <p>昵称</p>
+                    <div class="nickname-right">
+                        <p>小阿喵</p>
+                        <i class="iconfont hzjt" id="ncc">&#xe662;</i>
+                    </div>
+                </div>
+            </div>
+            <div class="gender">
+                <div class="gender-center">
+                    <p>性别</p>
+                    <div class="gender-right">
+                        <p>女</p>
+                        <i class="iconfont hzjt" id="xb">&#xe662;</i>
+                    </div>
+                </div>
+            </div>
+            <div class="briefIntroduction">
+                <div class="briefIntroduction-center">
+                    <p>简介</p>
+                    <div class="briefIntroduction-right">
+                        <p>永远可爱，永远呆萌萌</p>
+                        <i class="iconfont hzjt" id="jj">&#xe662;</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 弹框 -->
+    <div class="modifyGender">
+        <div class="boy" id="nan">
+            <p>男</p>
+        </div>
+        <div class="girl" id="nv">
+            <p>女</p>
+        </div>
+    </div>
+    <div class="editNickname">
+        <div class="editNickname-top">
+            <p class="nc">编辑昵称</p>
+            <p class="close iconfont" id="editNickname">&#xe61a;</p>
+        </div>
+        <div class="editNickname-center">
+            <input type="text" placeholder="编辑昵称">
+        </div>
+        <div class="editNickname-bottom">
+            <p class="tips">4-30个字符，支持中英文、数字</p>
+            <div class="save">
+                <p>保存</p>
+            </div>
+        </div>
+    </div>
+    <div class="editProfile">
+        <div class="editProfile-top">
+            <p class="nc">编辑简介</p>
+            <p class="close iconfont" id="editProfile">&#xe61a;</p>
+        </div>
+        <div class="editProfile-center">
+            <textarea type="text" placeholder="编辑简介"></textarea>
+        </div>
+        <div class="editProfile-bottom">
+            <button class="editProfile-save">
+                保存
+            </button>
+        </div>
+    </div>
+    <script src="./js/personalInformation.js"></script>
+  </body>
+</html>
