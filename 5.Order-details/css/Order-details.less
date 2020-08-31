@@ -1,0 +1,283 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: #999;
+}
+ul{
+  list-style: none;
+}
+body{
+  width: 100%;
+  height: 100%;
+  // overflow: hidden;
+}
+nav{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  height: 60px;
+  .back{
+    position: absolute;
+    left: 10px;
+    width: 40px;
+    height: 60px;
+    a{
+      display: block;
+      width: 40px;
+     height: 60px;
+      background: url(../images/back.png) no-repeat center;
+      background-size: 50%;
+    }
+  }
+  .order{
+    width: 90px;
+    line-height: 60px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    // color: red;
+  }
+  .admin{
+    position: absolute;
+    right: calc(70px / 2 - 36px);
+    // top: calc(50px / 2 - 18px);
+    width: 70px;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    color: rgb(199, 199, 199);
+    font-size: 18px;
+    font-weight: 530;
+    .radius{
+      position: relative;
+      .after{
+        // content: '联系客服';
+        display: none;
+        position: absolute;
+        left: calc(-30px / 2 + 5px);
+        bottom: calc(-30px);
+        width: 65px;
+        height: 36px;
+        background: #fff;
+        // background: red;
+        box-shadow:0 0 1px gray;
+        line-height: 36px;
+        // font-size: 12px;
+        font-size: 12px;
+        color: #999;
+      }
+      .before{
+        // content: '';
+        display: none;
+        position: absolute;
+        left: 37px;
+        top:32px;
+        width: 0;
+        border-style: solid;
+        border-width: 6px;
+        border-color: transparent transparent #000 transparent;
+      }
+    span{
+      display: inline-block;
+      background: black;
+      border-radius: 50%;
+      width: 3px;
+      height: 3px;
+    }
+  }
+  }
+}
+
+main{
+  padding-top:5px;
+  background: #f8f8f8;
+  width: 100%;
+  // height: 900px;
+  
+  .delivery{
+    box-sizing: border-box;
+    margin: auto;
+    padding: 20px;
+    background:#fff;
+    // opacity: .5;
+    border-radius: 15px;
+    width: 95%;
+    height: 90px;
+    .content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 235px;
+      .left{
+        .icon{
+          background: url(../images/delivery.png) no-repeat center;
+          background-size: 100%;
+          width: 60px;
+          height: 60px;
+        }
+      }
+      .right{
+        .pay-success{
+          font-size: 18px;
+          font-weight: 600;
+          color: rgb(253, 146, 40);
+        }
+        .order-success{
+          margin-top: 3px;
+          color: #999;
+          font-size: 12px;
+        }
+      }
+    }
+    
+  }
+
+  .container{
+    box-sizing: border-box;
+    margin: 5px auto;
+    padding: 15px;
+    padding-right: 0;
+    background: #fff;
+    border-radius: 15px;
+    width: 95%;
+    height: 370px;
+    label{
+      display: block;
+        margin: 5px 0;
+      
+      span{
+        display: inline-block;
+        width: 58px;
+        height: 30px;
+        font-size: 12px;
+      }
+      input{
+        background: #fff;
+        border: none;
+        outline: none;
+        width: 270px;
+        color:#c5c3c3;
+        font-size: 12px;
+      }
+    }
+  }
+  .goods{
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // background: red;
+    box-sizing: border-box;
+    margin-top: 7px;
+    width: 100%;
+    height: 200px;
+    
+  .wraper{
+    position: relative;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 15px 8px 0;
+    background: #fff;
+    border-radius: 15px;
+    width: 95%;
+    .number{
+      position: absolute;
+      top: 16px;
+      right: 12px;
+      font-size: 13px;
+      color: #999;
+    }
+    .wrap{
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      padding-left: 0px;
+      height: 155px;
+      .left-bottom{
+        width: 140px;
+        height: 100px;
+        background: url(../images/lipstick.png) no-repeat center;
+        background-size: 90%;
+      }
+      .right{
+        position: relative;
+        display: flex;
+        // justify-content: space-between;
+        width: 80%;
+        height: 70%;
+        h4{
+          margin-right: 10px;
+          width: 200px;
+          font-weight: 500;
+          color: #333;
+        }
+  
+        .volume{
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          margin: 10px 0;
+         width: 60px;
+         padding: 5px;
+          // background: rgb(247, 247, 247);
+          font-size: 14px;
+          color: #999;
+        }
+        button{
+          position: absolute;
+          right: -5px;
+          bottom: 10px;
+          transform: scale(.8);
+          outline: none;
+          border: 1px solid #999;
+          background: rgb(250, 250, 250);
+          width: 90px;
+          height: 34px;
+          color: rgb(179, 177, 177);
+          letter-spacing: 2px;
+        }
+        #ctrl{
+          font-size: 14px;
+         font-weight: 400;
+         p{
+           &:nth-last-child(1){
+             text-align: right;
+           }
+         }
+        }
+        
+        }
+      }
+  }
+}
+
+footer{
+  box-sizing: border-box;
+  margin:-13px auto;
+  padding: 15px;
+  background: #fff;
+  // background: red;
+  border-radius: 15px;
+  width: 95%;
+  height: 66px;
+  h1{
+    border-bottom: 1px solid #bebdbd;
+    height: 30px;
+  }
+  .message{
+    box-sizing: border-box;
+    margin-top: 10px;
+    font-size: 14px;
+    text-indent: 20px;
+    color: #999;
+  }
+}
+}

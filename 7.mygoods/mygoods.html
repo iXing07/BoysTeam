@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mygoods</title>
+  <link rel="stylesheet" href="../7.mygoods/css/mygoods.css">
+</head>
+
+<body style="user-select: none;">
+  <nav>
+    <div class="back">
+      <a href=""></a>
+    </div>
+    <div class="order">订单确认</div>
+    <!-- <div class="admin">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div> -->
+  </nav>
+
+  <main>
+    <div class="content">
+      <div class="seach">
+        <div class="icon"></div>
+        <input type="text" value="搜索我的订单">
+      </div>
+      <ul>
+        <!-- <li onclick="show(this)">全部订单</li>
+        <li onclick="show(this)">待付款</li>
+        <li onclick="show(this)">待发货</li>
+        <li onclick="show(this)">待收货</li>
+        <li onclick="show(this)">退货</li> -->
+
+        <li onclick="show('wrap1')">全部订单</li>
+        <li onclick="show('wrap2')">待付款</li>
+        <li onclick="show('wrap3')">待发货</li>
+        <li onclick="show('wrap4')">待收货</li>
+        <li onclick="show('wrap5')">退货</li>
+
+        <!-- <li >全部订单</li>
+        <li >待付款</li>
+        <li >待发货</li>
+        <li >待收货</li>
+        <li >退货</li> -->
+      </ul>
+    </div>
+
+    <span>共1条记录</span>
+
+    <div class="wrap3">
+      <div class="pay">买家已付款</div>
+      <div class="wraper">
+
+        <div class="left-bottom"></div>
+        <div class="right">
+          <h4>依泉润唇套装 保湿滋润补水无色防干裂 唇部护理唇膜淡化唇纹...</h4>
+          <div class="volume">8g/ml</div>
+          <div class="ctrl">
+            <p>￥98.9</p>
+            <p>X1</p>
+          </div>
+        </div>
+        <button type="button">提醒发货</button>
+      </div>
+    </div>
+
+    <div class="wrap4">
+      <div class="pay">卖家已发货</div>
+      <div class="wraper">
+
+        <div class="left-bottom"></div>
+        <div class="right">
+          <h4>依泉润唇套装 保湿滋润补水无色防干裂 唇部护理唇膜淡化唇纹...</h4>
+          <div class="volume">8g/ml</div>
+          <div class="ctrl">
+            <p>￥98.9</p>
+            <p>X1</p>
+          </div>
+        </div>
+        <div class="btn">
+          <button type="button">查看物流</button>
+          <button type="button">确认收货</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap5">
+      <div class="pay">退款成功</div>
+      <div class="wraper">
+
+        <div class="left-bottom"></div>
+        <div class="right">
+          <h4>依泉润唇套装 保湿滋润补水无色防干裂 唇部护理唇膜淡化唇纹...</h4>
+          <div class="volume">8g/ml</div>
+          <div class="ctrl">
+            <p>￥98.9</p>
+            <p>X1</p>
+          </div>
+        </div>
+        <div class="btn">
+          <button type="button">删除记录</button>
+          <button type="button">查看详情</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap2">
+      <h4 style="font-weight: 500;margin-bottom: 4px;">您还没有相关订单</h4>
+      <h5 style="font-weight: 500;color: #999;">快去看看有没有喜欢的吧~</h5>
+    </div>
+  </main>
+  <!-- <script src="../7.mygoods/css/vue.js"></script>
+  <script>
+    // const app = new Vue({
+    //   el: 'main',
+    //   data: {
+
+    //   },
+    //   methods: {
+    //     ev: function () {
+
+      //     var ul = document.getElementsByTagName('ul')[0]
+      //     ul.addEventListener('click', function (e) {
+      //       var par = null;
+      //       var li = document.getElementsByTagName('li')
+      //       if (par) {
+      //         li[i].style.borderBottom = '2px solid #fff'
+      //       }
+      //       var _this = e.target || window.event.srcElement;
+      //       par = _this;
+      //       if (_this.nodeName == 'LI') {
+      //         _this.style.borderBottom = '2px solid rgb(255,147,38)'}
+      //     })
+      //   }
+    //   }
+    // })
+  </script> -->
+
+  <script>
+    function Obj(obj) {
+      this.inp = obj.getTag('input')
+      console.log(this.inp.value);
+      this.run()
+    }
+
+    Obj.prototype.run = function () {
+      var _this = this
+      this.inp.onclick = function () {
+        _this.inp.value = ''
+      }
+    }
+    new Obj({
+      getTag: function (tag) {
+        return document.getElementsByTagName('input')[0]
+      }
+    })
+
+  </script>
+<script>
+    // 事件委托面向过程
+    var ul = document.getElementsByTagName('ul')[0]
+    ul.addEventListener('click',function(e){
+      var li = document.getElementsByTagName('li')
+      // console.log(li);
+      for(var i = 0; i< li.length; i++){
+        li[i].style.borderBottom = '2px solid #fff'
+      }
+      var _this = e.target || window.event.srcElement;
+      if(_this.nodeName == 'LI'){
+        _this.style.borderBottom = '2px solid rgb(255,147,38)'
+      }
+    })
+
+
+    // // 第二种写法
+    // function show(_this){
+    //   var li = document.getElementsByTagName('li')
+    //   for(var i = 0; i< li.length; i++){
+    //     li[i].style.borderBottom = '2px solid #fff'
+    //   }
+    //   _this.style.borderBottom = '2px solid rgb(255,147,38)'
+    // }
+
+    function show(obj){
+      var target = document.getElementsByClassName(obj)[0]
+      console.log(target);
+      // var element = document.getElementsByClassName(obj)
+      
+      target.style.display = 'block'
+      
+      
+    }
+  </script> 
+</body>
+
+</html>

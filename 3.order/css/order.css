@@ -2,6 +2,10 @@
   padding: 0;
   margin: 0;
 }
+* {
+  padding: 0;
+  margin: 0;
+}
 a {
   text-decoration: none;
   color: black;
@@ -16,24 +20,24 @@ nav {
   background: #fff;
   border-bottom: 1px solid #fff;
   width: 100%;
-  height: 50px;
+  height: 60px;
 }
 nav .back {
   position: absolute;
   left: 10px;
   width: 40px;
-  height: 50px;
+  height: 60px;
 }
 nav .back a {
   display: block;
   width: 40px;
-  height: 50px;
+  height: 60px;
   background: url(../images/back.png) no-repeat center;
   background-size: 50%;
 }
 nav .order {
   width: 90px;
-  line-height: 50px;
+  line-height: 60px;
   color: black;
   font-size: 22px;
   text-align: center;
@@ -58,13 +62,11 @@ nav .admin span {
   height: 3px;
 }
 main {
-  background: #f8f8f8;
+  background: #f9f9f9;
   width: 100%;
-  height: 650px;
 }
 main .container {
   width: 95%;
-  height: 100%;
   margin: auto;
 }
 main .container span {
@@ -73,16 +75,19 @@ main .container span {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 20px;
   display: inline-block;
-  margin: 8px auto 0;
+  margin: 8px auto -4px;
   background: #fff;
-  border-radius: 10px;
-  border-bottom: 2px solid #f8f8f8;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 1.5px solid #f8f8f8;
   width: 100%;
   height: 66px;
 }
 main .container span .left {
+  position: absolute;
+  right: 20px;
+  top: calc(66px / 2 - 40px / 2);
   width: 88%;
   height: 100%;
 }
@@ -115,151 +120,210 @@ main .container .wraper {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 0 5px;
+  padding-left: 0;
   background: #fff;
   width: 100%;
-  height: 200px;
-  border-radius: 10px;
-  margin-bottom: 4px;
+  height: 150px;
 }
 main .container .wraper .left-bottom {
-  background: url(../images/lipstick.png) no-repeat center;
-}
-main .container .wraper .left {
-  background: url(../images/lip\ rouge.png) no-repeat center;
-}
-main .container .wraper .left,
-main .container .wraper .left-bottom {
-  background-size: 100%;
   width: 140px;
-  height: 180px;
+  height: 100px;
+  background: url(../images/lipstick.png) no-repeat center;
+  background-size: 90%;
 }
 main .container .wraper .right {
   position: relative;
+  display: flex;
+  width: 80%;
+  height: 70%;
 }
 main .container .wraper .right h4 {
-  font-weight: 400;
+  margin-right: 10px;
+  width: 200px;
+  font-weight: 500;
   color: #333;
 }
-main .container .wraper .right .price {
-  color: red;
-}
 main .container .wraper .right .volume {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   margin: 10px 0;
   width: 60px;
   padding: 5px;
-  background: #f7f7f7;
   font-size: 14px;
   color: #999;
 }
-main .container .wraper .right .courret {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+main .container .wraper .right #ctrl {
+  font-size: 14px;
+  font-weight: 400;
 }
-main .container .wraper .right .courret .app {
-  position: relative;
-  box-sizing: border-box;
-  border: 1px solid #ddd;
-  width: 72px;
-  height: 20px;
-  text-align: center;
-  line-height: 18px;
-  color: #999;
-}
-main .container .wraper .right .courret .app .sub,
-main .container .wraper .right .courret .app .add {
-  position: absolute;
-  top: calc(-20px / 2 + 10px);
-  box-sizing: border-box;
-  border: 1px solid #e4e4e4;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 18px;
-  border-bottom: none;
-}
-main .container .wraper .right .courret .app .sub {
-  border-left: none;
-  left: 0;
-}
-main .container .wraper .right .courret .app .add {
-  border-right: none;
-  right: 0;
-}
-aside {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 0 15px;
-  background: #fff;
-  height: 50px;
-  width: 100%;
-  font-size: 18px;
-}
-aside .left {
-  width: 100px;
-  height: 50%;
-  color: #999999;
-}
-aside .right {
-  width: 400px;
-  height: 50%;
+main .container .wraper .right #ctrl p:nth-last-child(1) {
   text-align: right;
+}
+main .container .send {
+  margin-top: -20px;
+  background: #fff;
+  width: 100%;
+}
+main .container .send label {
+  display: block;
+  width: 100%;
+  height: 43px;
+  line-height: 43px;
+  font-size: 14px;
+}
+main .container .send label div {
+  display: inline-block;
+  width: 80px;
+}
+main .container .send label input {
+  border: none;
+  background: #fff;
+  color: gray;
+  line-height: 50px;
+  font-size: 14px;
+}
+main .container .price {
+  padding-right: 10px;
+  box-sizing: border-box;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 100%;
+  height: 50px;
+  line-height: 40px;
+  background: #fff;
+  text-align: right;
+}
+main .container .price li {
+  display: inline;
+  margin-left: 5px;
+  font-size: 14px;
+}
+main .container .price li:nth-last-child(3) {
+  font-size: 12px;
   color: #888888;
 }
-aside .right .sum {
-  display: inline-block;
-  margin-right: 10px;
-}
-aside .right .sum span:nth-last-child(1) {
+main .container .price li:nth-last-child(1) {
   color: red;
 }
-aside .right button {
+main .pay {
+  margin-top: 25px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #fff;
+  width: 95%;
+  height: 200px;
+  padding: 15px;
+  border-radius: 15px;
+}
+main .pay img {
+  float: left;
+  margin-right: 12px;
+  width: 5%;
+}
+main .pay .Alipay {
+  position: relative;
+  height: 35px;
+  margin-top: 20px;
+}
+main .pay .Alipay input {
+  position: absolute;
+  right: -4px;
+  outline: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  vertical-align: baseline;
+  line-height: 14px;
+  color: #999;
+  border: 1.5px solid #999;
+  border-radius: 50%;
+}
+main .pay .Alipay input[type="checkbox"]:checked::before {
+  content: "\2713";
+  border: 1.5px solid #ff9326;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 100%;
+  color: #ff9326;
+  font-size: 1rem;
+  font-weight: 900;
+  border-radius: 50%;
+}
+main .pay .Alipay .chk2 {
+  top: calc(36px);
+}
+main .pay .Alipay div {
+  float: left;
+}
+main .pay .Alipay .recommend {
+  margin-left: 10px;
+  padding: 1px 2px;
   background: #ff9326;
+  border-radius: 20%;
+  line-height: 16px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 100;
+  color: white;
+}
+main .pay .wechat {
+  width: 100%;
+}
+main .pay .buy {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 16px;
+  width: 80px;
+  height: 20px;
+}
+main .pay .buy img {
+  float: none;
+  align-self: center;
+  width: 11px;
+  height: 11px;
+}
+main .pay .buy div {
+  font-size: 12px;
+  color: #999;
+}
+main footer {
+  background: #fff;
+  box-sizing: border-box;
+  margin-top: 5px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+main footer .foot {
+  width: 95%;
+  text-align: right;
+}
+main footer .foot div {
+  margin-left: 3px;
+  display: inline-block;
+}
+main footer .foot .number {
+  font-size: 12px;
+  color: #999;
+}
+main footer .foot .sum {
+  font-size: 20px;
+  font-weight: 500;
+}
+main footer .foot .price {
+  color: #ff9326;
+  font-weight: 600;
+}
+main footer .foot button {
+  border-radius: 3px;
   outline: none;
   border: none;
-  border-radius: 5px;
+  background: #ff9326;
   width: 80px;
-  height: 30px;
+  height: 35px;
   color: #fff;
-}
-footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 0px 15px;
-  background: #f8f8f8;
-  width: 100%;
-  height: 60px;
-}
-footer .first,
-footer .second,
-footer .third,
-footer .fouth {
-  margin-top: 5px;
-  width: 40px;
-  height: 40px;
-  background: red;
-}
-footer .first {
-  background: url(../images/house.png) no-repeat;
-  background-size: 80%;
-}
-footer .second {
-  background: url(../images/more.png) no-repeat;
-  background-size: 80%;
-}
-footer .third {
-  background: url(../images/shop.png) no-repeat;
-  background-size: 80%;
-}
-footer .fouth {
-  background: url(../images/user.png) no-repeat;
-  background-size: 80%;
 }

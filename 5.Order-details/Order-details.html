@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order-details</title>
+  <link rel="stylesheet" href="../5.Order-details/css/Order-details.css">
+</head>
+<body style="user-select: none;">
+  <nav>
+    <div class="back">
+      <a href=""></a>
+    </div>
+    <div class="order">订单详情</div>
+    <div class="admin">
+      <div class="radius">
+        <div class="before"></div>
+        <div class="after">联系客服</div>
+        <span></span>
+      <span></span>
+      <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="delivery">
+      <div class="content">
+        <div class="left">
+          <div class="icon"></div>
+        </div>
+
+        <div class="right">
+        <div class="pay-success">待发货</div>
+        <div class="order-success">买家已付款，正在等待商家发货</div>
+      </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <label for=""><span>收货人</span>
+      <input type="text" disabled value="郭女士&nbsp;&nbsp;&nbsp;&nbsp;178****8520"></label>
+      <label for=""><span>收货地址</span>
+      <input type="text" disabled value="浙江省温州市鹿城工业区泰力路37号B幢203室"></label>
+      <hr style="height: 1px;background-color: #ecebeb;border:none;margin: 5px 0 10px;">
+      <label for=""><span>订单编号</span>
+      <input type="text" disabled value="1761939633080133"></label>
+      <label for=""><span>下单时间</span>
+      <input type="text" disabled value="2019-11-18 15:30"></label>
+      <label for=""><span>付款时间</span>
+        <input type="text" disabled value="2019-11-18 15:40"></label>
+        <label for=""><span>配送方式</span>
+          <input type="text" disabled value="普通配送"></label>
+          <label for=""><span>发货时间</span>
+            <input type="text" disabled value="付款后7个工作日内"></label>
+            <label for=""><span>优惠券</span>
+              <input type="text" disabled value="无可用"></label>
+              <label for=""><span>备注</span>
+                <input type="text" disabled value="无"></label>
+    </div>
+
+    <div class="goods">
+      <div class="wraper">
+        <h1 style="font-size: 16px;position: absolute;left: 8px;top: 16px;">商品详情</h1>
+        <div class="number">共 1 件</div>
+        <div class="wrap">
+          <div class="left-bottom"></div>
+          <div class="right">
+            <h4>依泉润唇套装 保湿滋润补水无色防干裂 唇部护理唇膜淡化唇纹...</h4>
+            <div class="volume">8g/ml</div>
+            <button type="button"><a href="../6. refund/refund.html">申请退款</a></button>
+            <div id="ctrl">
+              <p>￥98.9</p>
+              <p>X1</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <h1 style="font-size: 16px;">物流信息</h1>
+      <div class="message">暂无物流信息，请耐心等待</div>
+    </footer>
+    </main>
+
+    <script>
+      function Display(obj){
+        this.admin = obj.getClass('admin')
+        this.before = obj.getClass('before')
+        this.after = obj.getClass('after')
+        this.index = 2
+        
+        // this.a = this.hide
+        // console.log(this.before,this.after);
+        this.run()&&this.index++;
+        
+        
+      }
+
+      Display.prototype.run = function(){
+        var _this = this
+        
+        // _this.index = Math.floor(Math.random()*10)
+        this.admin.onclick = function(){
+          // this.index++
+          if(_this.index % 2 == 0){
+          (function(){
+           _this.before.style.display = 'block'
+           _this.after.style.display = 'block'
+          })()
+          // alert(2)
+          console.log(_this.index);
+          }else{
+            (function(){
+              _this.before.style.display = 'none'
+              _this.after.style.display = 'none'
+            })()
+            alert(1)
+            console.log(_this.index);
+          }
+          
+        }
+       
+      }
+
+      new Display({
+        getClass: function(cls){
+          return document.getElementsByClassName(cls)[0]
+        }
+        // none:function(yn){
+         
+        // }
+      })
+      // console.log(document.getElementsByClassName('admin')[0]);
+    </script>
+</body>
+</html>

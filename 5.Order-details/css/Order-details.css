@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #999;
+}
+ul {
+  list-style: none;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  height: 60px;
+}
+nav .back {
+  position: absolute;
+  left: 10px;
+  width: 40px;
+  height: 60px;
+}
+nav .back a {
+  display: block;
+  width: 40px;
+  height: 60px;
+  background: url(../images/back.png) no-repeat center;
+  background-size: 50%;
+}
+nav .order {
+  width: 90px;
+  line-height: 60px;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+nav .admin {
+  position: absolute;
+  right: calc(70px / 2 - 36px);
+  width: 70px;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  color: #c7c7c7;
+  font-size: 18px;
+  font-weight: 530;
+}
+nav .admin .radius {
+  position: relative;
+}
+nav .admin .radius .after {
+  display: none;
+  position: absolute;
+  left: calc(-30px / 2 + 5px);
+  bottom: calc(-30px);
+  width: 65px;
+  height: 36px;
+  background: #fff;
+  box-shadow: 0 0 1px gray;
+  line-height: 36px;
+  font-size: 12px;
+  color: #999;
+}
+nav .admin .radius .before {
+  display: none;
+  position: absolute;
+  left: 37px;
+  top: 32px;
+  width: 0;
+  border-style: solid;
+  border-width: 6px;
+  border-color: transparent transparent #000 transparent;
+}
+nav .admin .radius span {
+  display: inline-block;
+  background: black;
+  border-radius: 50%;
+  width: 3px;
+  height: 3px;
+}
+main {
+  padding-top: 5px;
+  background: #f8f8f8;
+  width: 100%;
+}
+main .delivery {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 15px;
+  width: 95%;
+  height: 90px;
+}
+main .delivery .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 235px;
+}
+main .delivery .content .left .icon {
+  background: url(../images/delivery.png) no-repeat center;
+  background-size: 100%;
+  width: 60px;
+  height: 60px;
+}
+main .delivery .content .right .pay-success {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fd9228;
+}
+main .delivery .content .right .order-success {
+  margin-top: 3px;
+  color: #999;
+  font-size: 12px;
+}
+main .container {
+  box-sizing: border-box;
+  margin: 5px auto;
+  padding: 15px;
+  padding-right: 0;
+  background: #fff;
+  border-radius: 15px;
+  width: 95%;
+  height: 370px;
+}
+main .container label {
+  display: block;
+  margin: 5px 0;
+}
+main .container label span {
+  display: inline-block;
+  width: 58px;
+  height: 30px;
+  font-size: 12px;
+}
+main .container label input {
+  background: #fff;
+  border: none;
+  outline: none;
+  width: 270px;
+  color: #c5c3c3;
+  font-size: 12px;
+}
+main .goods {
+  box-sizing: border-box;
+  margin-top: 7px;
+  width: 100%;
+  height: 200px;
+}
+main .goods .wraper {
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 15px 8px 0;
+  background: #fff;
+  border-radius: 15px;
+  width: 95%;
+}
+main .goods .wraper .number {
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  font-size: 13px;
+  color: #999;
+}
+main .goods .wraper .wrap {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 0px;
+  height: 155px;
+}
+main .goods .wraper .wrap .left-bottom {
+  width: 140px;
+  height: 100px;
+  background: url(../images/lipstick.png) no-repeat center;
+  background-size: 90%;
+}
+main .goods .wraper .wrap .right {
+  position: relative;
+  display: flex;
+  width: 80%;
+  height: 70%;
+}
+main .goods .wraper .wrap .right h4 {
+  margin-right: 10px;
+  width: 200px;
+  font-weight: 500;
+  color: #333;
+}
+main .goods .wraper .wrap .right .volume {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 10px 0;
+  width: 60px;
+  padding: 5px;
+  font-size: 14px;
+  color: #999;
+}
+main .goods .wraper .wrap .right button {
+  position: absolute;
+  right: -5px;
+  bottom: 10px;
+  transform: scale(0.8);
+  outline: none;
+  border: 1px solid #999;
+  background: #fafafa;
+  width: 90px;
+  height: 34px;
+  color: #b3b1b1;
+  letter-spacing: 2px;
+}
+main .goods .wraper .wrap .right #ctrl {
+  font-size: 14px;
+  font-weight: 400;
+}
+main .goods .wraper .wrap .right #ctrl p:nth-last-child(1) {
+  text-align: right;
+}
+main footer {
+  box-sizing: border-box;
+  margin: -13px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 15px;
+  width: 95%;
+  height: 66px;
+}
+main footer h1 {
+  border-bottom: 1px solid #bebdbd;
+  height: 30px;
+}
+main footer .message {
+  box-sizing: border-box;
+  margin-top: 10px;
+  font-size: 14px;
+  text-indent: 20px;
+  color: #999;
+}

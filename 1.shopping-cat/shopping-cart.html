@@ -76,7 +76,7 @@
       <span>合计:</span>
       <span>￥98.9</span>
     </div>
-    <button type="botton" id="">结 算</button>
+    <button type="botton" id=""><a href="../3.order/order.html">结算</a></button>
     </div>
   </aside>
 
@@ -86,7 +86,7 @@
     <div class="third " ></div>
     <div class="fouth " ></div>
   </footer>
-  <script src="./js/vue.js"></script>
+  <script src="../1.shopping-cat/js/vue.js"></script>
   <script>
     const app = new Vue({
       el: '#ctrl',
@@ -97,7 +97,6 @@
       data: {
         s: localStorage.getItem('temp') || 1,
         price: this.s
-
       },
       methods: {
         init: function(){
@@ -123,9 +122,9 @@
  
   </script>
   <script>
+    // 面向对象事件委托
     function ChangeColor(obj){
       this.footer = obj.getTag('footer');
-      console.log(this.footer);
       this.run()
     }
 
